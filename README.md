@@ -2,7 +2,7 @@
 
 ## Overview
 
-This AI-powered Service-Oriented Architecture (SOA) Auto Recovery Framework is designed to enhance the resilience and performance of containerized applications. It provides intelligent monitoring, prediction, and optimization capabilities to automatically detect, prevent, and recover from potential issues in your microservices environment.
+This AI-powered Service-Oriented Architecture (SOA) Auto Recovery Framework is designed based on the eShop solution (https://github.com/dotnet/eShop) to enhance the resilience and performance of containerized applications. It provides intelligent monitoring, prediction, and optimization capabilities to automatically detect, prevent, and recover from potential issues in your microservices environment.
 
 ## Key Components
 
