@@ -5,6 +5,13 @@
     <PublishAot Condition="'$(EnableAotPublishing)' == 'true'">true</PublishAot>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="App.Metrics.AspNetCore" />
+    <PackageReference Include="App.Metrics.AspNetCore.Endpoints" />
+    <PackageReference Include="App.Metrics.Formatters.Prometheus" />
+    <PackageReference Include="App.Metrics.Reporting.InfluxDB" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI" />
+    <PackageReference Include="prometheus-net.AspNetCore" />
+    <PackageReference Include="prometheus-net.AspNetCore.HealthChecks" />
     <PackageReference Include="Aspire.StackExchange.Redis" />
     <PackageReference Include="Grpc.AspNetCore" />
   </ItemGroup>

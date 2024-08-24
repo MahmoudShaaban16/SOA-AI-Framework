@@ -122,6 +122,8 @@ identityApi.WithEnvironment("BasketApiClient", basketApi.GetEndpoint("http"))
            .WithEnvironment("WebhooksWebClient", webhooksClient.GetEndpoint(launchProfileName))
            .WithEnvironment("WebAppClient", webApp.GetEndpoint(launchProfileName));
 
+//builder.AddProject<Projects.WatcherService>("watcherservice");
+
 builder.Build().Run();
 
 // For test use only.

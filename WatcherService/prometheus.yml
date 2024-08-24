@@ -1,0 +1,16 @@
+﻿global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'catalog'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['catalog:5000']
+  - job_name: 'order'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['order:5000']
+  - job_name: 'identity'
+    metrics_path: /metrics
+    static_configs:
+      - targets: ['identity:5000']

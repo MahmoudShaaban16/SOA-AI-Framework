@@ -7,6 +7,13 @@
 
   <ItemGroup>
     <PackageReference Include="Automapper" />
+    <PackageReference Include="App.Metrics.AspNetCore" />
+    <PackageReference Include="App.Metrics.AspNetCore.Endpoints" />
+    <PackageReference Include="App.Metrics.Formatters.Prometheus" />
+    <PackageReference Include="App.Metrics.Reporting.InfluxDB" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI" />
+    <PackageReference Include="prometheus-net.AspNetCore" />
+    <PackageReference Include="prometheus-net.AspNetCore.HealthChecks" />
     <PackageReference Include="Duende.IdentityServer.AspNetIdentity" />
     <PackageReference Include="Duende.IdentityServer.EntityFramework" />
     <PackageReference Include="Duende.IdentityServer.Storage" />

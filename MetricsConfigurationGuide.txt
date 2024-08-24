@@ -1,0 +1,48 @@
+Setting Up InfluxDB
+a. Install and Run InfluxDB
+If you haven't already installed InfluxDB, you can do so with Docker:
+
+docker run -d -p 8086:8086 --name influxdb influxdb
+
+b. Create a Database
+Create a database in InfluxDB for storing metrics:
+
+
+curl -XPOST "http://localhost:8086/query" --data-urlencode "q=CREATE DATABASE metricsdb"
+
+Replace metricsdb with the name of your database if you choose a different name.
+
+
+4. Visualizing Metrics with Grafana
+Once your metrics are stored in InfluxDB, you can visualize them using Grafana.
+
+a. Install Grafana
+You can run Grafana via Docker:
+
+
+docker run -d -p 3000:3000 --name=grafana grafana/grafana
+
+b. Add InfluxDB as a Data Source in Grafana
+Open Grafana (http://localhost:3000).
+
+Log in with the default credentials (admin/admin).
+
+Go to Configuration > Data Sources > Add data source.
+
+Select InfluxDB.
+
+Configure the connection:
+
+URL: http://localhost:8086
+Database: metricsdb
+User: Your InfluxDB user (if authentication is enabled)
+Password: Your InfluxDB password (if authentication is enabled)
+Click Save & Test to ensure Grafana can connect to InfluxDB.
+
+c. Create Dashboards
+Go to Create > Dashboard.
+Add panels to visualize your metrics (e.g., request rate, response time).
+Use InfluxQL or Flux query language to extract and display the metrics you want to monitor.
+
+run promoetheus
+docker run -p 9090:9090 -v /path/to/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
